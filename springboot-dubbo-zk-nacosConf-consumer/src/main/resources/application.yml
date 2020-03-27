@@ -1,0 +1,26 @@
+server: 
+   port: 8282
+   
+   
+spring: 
+   application: 
+      name: dubbo-consumer
+      
+      
+dubbo: 
+   application:
+#      name: dubbo-consumer
+   protocol:
+      name: dubbo
+      port: -1
+   scan: 
+      base-packages: com.yzl.study.spingboot
+   registry:
+      address: zookeeper://127.0.0.1:2181
+   consumer:
+      check: false
+
+demo: 
+   service: 
+      version: 1.0.0
+      

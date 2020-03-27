@@ -1,0 +1,40 @@
+server:
+   port: 8080
+   tomcat:
+#      maxHttpHeaderSize: 8192
+      max-http-eader-size: 8192
+spring: 
+   application: 
+      name: dubbo-provider
+      
+      
+      
+      
+dubbo: 
+   application: 
+#      name: ${spring.application.name}  # The default value of dubbo.application.name is ${spring.application.name}
+   protocol: 
+      name: dubbo
+      port: -1
+   registry: 
+      address: zookeeper://127.0.0.1:2181  
+   scan: 
+      base-packages: com.yzl.study.spingboot
+
+nacos: 
+   server-addr: 192.168.1.3:8848
+   namespace: f78a2b0f-4abd-4a36-be93-ac334aa2fbbc
+
+
+## DemoService version
+demo: 
+   service: 
+      version: 1.0.0
+      
+      
+logging: 
+   level: 
+      root: DEBUG   
+   
+   
+      

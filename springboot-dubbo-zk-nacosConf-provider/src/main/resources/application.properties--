@@ -1,0 +1,21 @@
+
+spring.application.name=dubbo-provider
+dubbo.scan.base-packages=com.yzl.study.spingboot
+
+# Dubbo Application
+## The default value of dubbo.application.name is ${spring.application.name}
+## dubbo.application.name=${spring.application.name}
+
+#embedded.zookeeper.port = 2181
+
+# Dubbo Protocol
+dubbo.protocol.name=dubbo
+## Random port
+dubbo.protocol.port=-1
+
+## Dubbo Registry
+dubbo.registry.address=zookeeper://127.0.0.1:2181
+#dubbo.registry.file = ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+
+## DemoService version
+demo.service.version=1.0.0
