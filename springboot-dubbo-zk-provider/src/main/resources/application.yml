@@ -1,0 +1,26 @@
+server:
+   port: 8080
+
+spring: 
+   application: 
+      name: dubbo-provider
+      
+      
+      
+      
+dubbo: 
+   application: 
+#      name: ${spring.application.name}  # The default value of dubbo.application.name is ${spring.application.name}
+   protocol: 
+      name: dubbo
+      port: -1
+   registry: 
+      address: zookeeper://127.0.0.1:2181  
+   scan: 
+      base-packages: com.yzl.study.spingboot
+
+
+## DemoService version
+demo: 
+   service: 
+      version: 1.0.0
